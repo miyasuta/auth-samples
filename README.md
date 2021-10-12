@@ -16,5 +16,5 @@ BTP destination with be created for the two cap services.
 1. Clone this repository.
 2. Execute `npm i` on each component.
 3. Start products with `cds watch`.
-4. Start salesorders with 'cds watch --port 4005`.
+4. Start salesorders with `cds watch --port 4005`.
 5. Start salesordersui with `npm start`.
