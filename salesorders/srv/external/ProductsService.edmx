@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+  <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+    <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+  </edmx:Reference>
+  <edmx:DataServices>
+    <Schema Namespace="ProductsService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+      <EntityContainer Name="EntityContainer">
+        <EntitySet Name="Products" EntityType="ProductsService.Products"/>
+      </EntityContainer>
+      <EntityType Name="Products">
+        <Key>
+          <PropertyRef Name="ID"/>
+        </Key>
+        <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+        <Property Name="name" Type="Edm.String"/>
+      </EntityType>
+      <Annotations Target="ProductsService.Products/ID">
+        <Annotation Term="Common.Label" String="{i18n>productCode}"/>
+      </Annotations>
+      <Annotations Target="ProductsService.Products/name">
+        <Annotation Term="Common.Label" String="{i18n>name}"/>
+      </Annotations>
+    </Schema>
+  </edmx:DataServices>
+</edmx:Edmx>
+
+<!-- srcFile:c:\Users\mio-f\UI5Projects\cap\auth-sample\products\srv\products-service.cds -->

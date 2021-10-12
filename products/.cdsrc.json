@@ -1,0 +1,15 @@
+{
+    "auth": {
+        "passport": {
+            "strategy": "mock", 
+            "users": {
+                "admin": { 
+                    "password": "dummy", 
+                    "roles": ["authenticated-user"],
+                    "userAttributes": []
+                }               
+            }
+        }
+    }    
+}
+

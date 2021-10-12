@@ -1,0 +1,29 @@
+{
+    "auth": {
+        "passport": {
+            "strategy": "mock", 
+            "users": {
+                "admin": { 
+                    "password": "dummy", 
+                    "roles": ["Admin", "authenticated-user"],
+                    "userAttributes": []
+                },
+                "viewer": { 
+                    "password": "dummy", 
+                    "roles": ["Viewer", "authenticated-user"],
+                    "userAttributes": {
+                        "company": "1000"
+                    }
+                },
+                "sales": { 
+                    "password": "dummy", 
+                    "roles": ["Sales", "authenticated-user"],
+                    "userAttributes": {
+                        "company": "2000"
+                    }
+                }
+                                    
+            }
+        }
+    }    
+}
