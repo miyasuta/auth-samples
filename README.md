@@ -18,3 +18,4 @@ BTP destination with be created for the two cap services.
 3. Start products with `cds watch`.
 4. Start salesorders with `cds watch --port 4005`.
 5. Start salesordersui with `npm start`.
+6. When prompted login, use one of the users defined [here](https://github.com/miyasuta/auth-samples/blob/master/salesorders/.cdsrc.json).
