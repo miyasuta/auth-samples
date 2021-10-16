@@ -12,9 +12,13 @@ service SalesOrderService {
         ])
     as projection on db.SalesOrders;
 
-//  how to apply authrization check based on company?
-    entity SalesOrderItems  
-    as projection on db.SalesOrderItems;
+     @(restrict: [
+            { grant: 'READ', to: 'Viewer', where: 'company = $user.company' },
+            { grant: ['READ', 'WRITE'], to: 'Sales', where: 'company = $user.company' },
+            { grant: 'READ', to: 'Admin' }
+        ])
+    entity SalesOrderItems as select from db.SalesOrderItems {*,
+        order.company as company};
 
     entity Products as projection on ProductsService.Products;
 }
