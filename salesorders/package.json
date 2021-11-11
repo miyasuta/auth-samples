@@ -17,8 +17,8 @@
     "sqlite3": "^5.0.2"
   },
   "scripts": {
-    "start": "cds run",
-    "start:dev": "cds watch",
+    "start:default": "cds run",
+    "start": "cds watch --port 4005",
     "deploy": "cf deploy mta_archives/salesorders_1.0.0.mtar"
   },
   "eslintConfig": {

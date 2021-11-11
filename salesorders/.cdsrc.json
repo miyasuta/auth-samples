@@ -6,20 +6,25 @@
                 "admin": { 
                     "password": "dummy", 
                     "roles": ["Admin", "authenticated-user"],
-                    "userAttributes": []
+                    "userAttributes": {
+                        "Company": ["*"],
+                        "Region": ["*"]                        
+                    }
                 },
                 "viewer": { 
                     "password": "dummy", 
                     "roles": ["Viewer", "authenticated-user"],
                     "userAttributes": {
-                        "company": "1000"
+                        "Company": ["1000"],
+                        "Region": ["Asia", "Europe"]
                     }
                 },
                 "sales": { 
                     "password": "dummy", 
                     "roles": ["Sales", "authenticated-user"],
                     "userAttributes": {
-                        "company": "2000"
+                        "Company": ["1000", "2000"],
+                        "Region": ["Asia"]
                     }
                 }
                                     

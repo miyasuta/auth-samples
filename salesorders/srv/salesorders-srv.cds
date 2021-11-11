@@ -20,6 +20,11 @@ service SalesOrderService {
     entity SalesOrderItems as select from db.SalesOrderItems {*,
         order.company as company};
 
+     @(restrict: [
+            { grant: 'READ', to: 'Viewer' },
+            { grant: ['READ', 'WRITE'], to: 'Sales' },
+            { grant: 'READ', to: 'Admin' }
+        ])    
     entity Products as projection on ProductsService.Products;
 }
 

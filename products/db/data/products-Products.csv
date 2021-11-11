@@ -1,4 +1,9 @@
-ID;name
-1;Apple
-2;Banana
-3;Strawberry
+ID;name;company;region
+1;Apple;1000;Asia
+2;Banana;1000;Asia
+3;Strawberry;1000;Europe
+4;Plum;1000;Europe
+5;Peach;2000;Asia
+6;Watermelon;2000;Asia
+7;Lemon;2000;Europe
+8;Grape;2000;Europe

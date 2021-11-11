@@ -107,6 +107,23 @@
             "internalConsoleOptions": "neverOpen",
             "port": 9229,
             "env": {}
+        },
+        {
+            "name": "Start cap salesorders",
+            "type": "node",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/salesorders",
+            "runtimeExecutable": "npm",
+            "windows": {
+                "runtimeExecutable": "npm.cmd"
+            },
+            "runtimeArgs": [
+                "start"
+            ],
+            "console": "integratedTerminal",
+            "internalConsoleOptions": "neverOpen",
+            "port": 9229,
+            "env": {}
         }
     ],
     "compounds": []
